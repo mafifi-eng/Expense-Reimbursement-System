@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+   version="4.0">
+  
+  <display-name>ERS</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+   <servlet>  
+<servlet-name>MainController</servlet-name>  
+<servlet-class>com.revature.ers.web.MainController</servlet-class>  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>MainController</servlet-name>  
+<url-pattern>/MainController</url-pattern>  
+</servlet-mapping>  
+
+<servlet>
+<servlet-name>WelcomeServlet</servlet-name>
+<servlet-class>com.revature.ers.web.WelcomeServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>WelcomeServlet</servlet-name>
+<url-pattern>/WelcomeServlet</url-pattern>
+</servlet-mapping>
+
+  <servlet>
+    <servlet-name>WebServlet</servlet-name>
+    <servlet-class>com.revature.ers.web.WebServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WebServlet</servlet-name>
+    <url-pattern>/test/*</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <servlet-name>requestWebService</servlet-name>
+    <servlet-class>com.revature.ers.web.RequestWebService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>requestWebService</servlet-name>
+    <url-pattern>/request/*</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>updateInfo</servlet-name>
+    <servlet-class>com.revature.ers.web.UpdateController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>updateInfo</servlet-name>
+    <url-pattern>/updateController</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>registerEmp</servlet-name>
+    <servlet-class>com.revature.ers.web.RegisterEmployeeController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>registerEmp</servlet-name>
+    <url-pattern>/RegisterEmployeeController</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>SubmitRequest</servlet-name>
+    <servlet-class>com.revature.ers.web.SubmitRequestController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SubmitRequest</servlet-name>
+    <url-pattern>/submitRequest/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>RequestProcess</servlet-name>
+    <servlet-class>com.revature.ers.web.RequestprocessController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RequestProcess</servlet-name>
+    <url-pattern>/requestProcess/*</url-pattern>
+  </servlet-mapping>
+</web-app>
