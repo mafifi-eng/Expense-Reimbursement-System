@@ -25,5 +25,5 @@ $ sh $CATALINA_BASE/bin/startup.sh
 Contributors
 Mohammed Afifi
 
-License
+ License
 
